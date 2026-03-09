@@ -33,7 +33,6 @@ Rank, Name, Platform, Year, Genre, Publisher, NA_Sales, EU_Sales, JP_Sales, Othe
 At the completion of this project, the following outcomes are expected:
 
 #### Analytical Outcomes
-
 - Identification of the top-performing games, genres, platforms, and publishers in the global video game market.
 - Clear understanding of regional differences in gaming preferences between North America, Europe, Japan, and other regions.
 - Discovery of historical market trends, including the rise and decline of platforms and genres.
@@ -83,7 +82,7 @@ video-game-sales-analysis/
 
 │ ├── raw/
 
-│ │ └── vgsales.csv
+│ │ └── video_games_sales.csv
 
 │ ├── processed/
 
@@ -121,11 +120,21 @@ video-game-sales-analysis/
 
 │ └── market_analysis.py
 
+├── visualization/
+
+│ ├── __init__.py
+
+│ ├── charts.py
+
+│ └── dashboard.py
+
 ├── reports/
 
 │ ├── figures/
 
 │ └── insights/
+
+├── main.py
 
 ├── pyproject.toml
 
@@ -153,39 +162,18 @@ These questions provide additional context and depth to the analysis.
 1. Are there any significant differences in genre preferences between regions?
 2. How do sales trends differ between platforms over time?
 3. Are there any outliers in the dataset, such as games that significantly outperform others?
-4. How do sales of top games compare to the average sales in their respective genres or platforms
-5. What is the distribution of sales across different price points (if price data is available)?
-6. Are there any correlations between game attributes (e.g., genre, platform) and sales performance?
-7. How do sales of games released in different decades compare?
-8. Are there any seasonal trends in video game sales (e.g., holiday releases)?
-9. How do sales of physical copies compare to digital sales (if data is available)?
-10. What is the impact of critical reception (e.g., review scores) on sales performance (if data is available)?
-11. Are there any notable differences in sales performance between indie games and AAA titles (if data is available)?
-12. How do sales of games with different age ratings (e.g., E, T, M) compare (if data is available)?
-13. Are there any trends in the types of games that perform well in different regions (e.g., action games in NA vs. RPGs in JP)?
-14. How do sales of games with different multiplayer features compare (if data is available)?
-15. Are there any correlations between the number of platforms a game is released on and its sales performance?
-16. How do sales of games with different marketing budgets compare (if data is available)?
+4. How do sales of top games compare to the average sales in their respective genres or platforms?
+5. Are there any correlations between game attributes (e.g., genre, platform) and sales performance?
+6. How do sales of games released in different decades compare?
+7. Are there any trends in the types of games that perform well in different regions (e.g., action games in NA vs. RPGs in JP)?
+8. Are there any correlations between the number of platforms a game is released on and its sales performance?
 
 #### Advanced Insights:
 These analyses create standout insights for a portfolio project.
 
-1. Can we predict global sales based on game attributes using a machine learning model (if data is available)?
+1. Can we predict global sales based on game attributes (Genre, Platform, Publisher, Year) using a machine learning model?
 2. Are there any emerging trends in the types of games that are becoming more popular over time?
-3. How do sales of games with different monetization models (e.g., free-to-play vs. premium) compare (if data is available)?
-4. Can we identify any clusters of similar games based on their attributes and sales performance?
-5. How do sales of games with different levels of critical acclaim (e.g., Metacritic scores) compare (if data is available)?
-6. Are there any significant differences in sales performance between games developed by different studios (if data is available)?
-7. Can we identify any patterns in the release dates of successful games (e.g., do certain months or days of the week correlate with higher sales)?
-8. How do sales of games with different types of content (e.g., single-player vs. multiplayer) compare (if data is available)?
-9. Are there any correlations between the number of platforms a game is released on and its sales performance?
-10. Can we identify any trends in the types of games that perform well in different regions (e.g., action games in NA vs. RPGs in JP)?
-11. How do sales of games with different levels of marketing spend compare (if data is available)?
-12. Can we identify any patterns in the release dates of successful games (e.g., do certain months or days of the week correlate with higher sales)?
-13. Are there any significant differences in sales performance between games developed by different studios (if data is available)?
-14. Can we identify any clusters of similar games based on their attributes and sales performance?
-15. How do sales of games with different monetization models (e.g., free-to-play vs. premium) compare (if data is available)?
-16. Can we predict global sales based on game attributes using a machine learning model (if data is available)?
+3. Can we identify any clusters of similar games based on their attributes and sales performance?
 
 
 ### EDA Checkpoints
@@ -231,4 +219,14 @@ The schema will include the following fields:
 
 The validation process will include checks for missing values, data types, and consistency in the dataset. Any issues identified during validation will be addressed in the data cleaning stage to ensure that the analysis is based on high-quality data.
 
+### Notebook Writing Style
+When writing Jupyter Notebooks for this project, the following style guidelines will be followed to ensure clarity and readability:
+
+1. **Markdown Cells**: Use markdown cells to provide clear explanations of the code, the analysis process, and the insights being derived. Each section of the notebook should have a descriptive heading.
+2. **Code Cells**: Write clean and well-commented code in code cells. Each code cell should perform a specific task, and comments should explain the purpose of the code and any important details.
+3. **Visualizations**: Include visualizations to support the analysis and insights. Each visualization should have a descriptive title and axis labels where appropriate.
+4. **Narrative Flow**: Ensure that the notebook has a logical flow, with each section building on the previous one. The narrative should guide the reader through the analysis process and lead to clear conclusions.
+5. **Reproducibility**: Ensure that the notebook can be run from start to finish without errors, and that all necessary data and dependencies are included or clearly documented. This will allow others to reproduce the analysis and understand the insights derived from the data.
+6. **Summary and Conclusions**: At the end of the notebook, include a summary of the key findings and insights derived from the analysis, along with any recommendations or implications for the video game industry based on the data.
+7. **Others**: Follow best practices for code style, such as using meaningful variable names, avoiding hard-coded values, and adhering to PEP 8 guidelines for Python code. Make the notebook is kaggle-ready, with a clear and engaging narrative that highlights the insights derived from the data.
 
