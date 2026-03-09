@@ -7,4 +7,36 @@ wheels/
 *.egg-info
 
 # Virtual environments
-.venv
+.venv/
+
+# uv
+uv.lock
+
+# Python version pin
+.python-version
+
+# Ruff cache
+.ruff_cache/
+
+# Pytest cache
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Data — keep raw source, ignore processed/external outputs
+data/processed/
+data/external/
+
+# Reports — generated figures and insights are build artifacts
+reports/figures/
+reports/insights/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
