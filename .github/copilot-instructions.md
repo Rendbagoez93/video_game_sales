@@ -76,69 +76,28 @@ These outcomes position the project as a strong portfolio piece for data analyst
 ### Project Structure:
 ```A clean project structure improves readability and reproducibility.```
 
-video-game-sales-analysis/
-
+video_game_sales/
 ├── data/
-
-│ ├── raw/
-
-│ │ └── video_games_sales.csv
-
-│ ├── processed/
-
-│ └── external/
-
+│   ├── raw/                  # Source dataset (video_games_sales.csv)
+│   └── processed/            # Cleaned output (gitignored)
 ├── notebooks/
-
-│ ├── 01_data_overview.ipynb
-
-│ ├── 02_data_cleaning.ipynb
-
-│ ├── 03_eda.ipynb
-
-│ └── 04_analysis.ipynb
-
+│   ├── 01_data_overview.ipynb
+│   ├── 02_data_cleaning.ipynb
+│   ├── 03_eda.ipynb
+│   └── 04_analysis.ipynb
 ├── src/
-
-│ ├── ingestion/
-
-│ │ └── load_dataset.py
-
-│ ├── validation/
-
-│ │ └── [schema.py](http://schema.py)
-
-│ ├── cleaning/
-
-│ │ └── clean_sales_data.py
-
-│ ├── features/
-
-│ │ └── feature_engineering.py
-
-│ └── analysis/
-
-│ └── market_analysis.py
-
-├── visualization/
-
-│ ├── __init__.py
-
-│ ├── charts.py
-
-│ └── dashboard.py
-
+│   ├── ingestion/            # Data loading
+│   ├── validation/           # Pandera schema checks
+│   ├── cleaning/             # Data cleaning functions
+│   ├── features/             # Feature engineering
+│   └── analysis/             # Market analysis
+├── visualization/            # Chart and dashboard builders
+├── tests/                    # Pytest test suite
 ├── reports/
-
-│ ├── figures/
-
-│ └── insights/
-
+│   ├── figures/              # Generated HTML charts (gitignored)
+│   └── insights/
 ├── main.py
-
-├── pyproject.toml
-
-└── [README.md](http://README.md)
+└── pyproject.toml
 
 ### Analytical Questions:
 #### Core Insights:
